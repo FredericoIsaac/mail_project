@@ -5,7 +5,7 @@ from pathlib import Path
 
 WORD_TEMPLATE = "saft_mail_template.docx"
 EXCEL_PATH = "Controle de Saft 2021 - Experiencia.xlsx"
-SHEET = "Controlo de SAFT 01"
+SHEET = "Controlo de SAFT V.1.02.02"
 ABSOLUTE_PATH_LOGO = r"C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project\logo_confere.png"
 
 # Get the corresponding month and year of the SAFT:
