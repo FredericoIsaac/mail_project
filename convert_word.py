@@ -3,7 +3,8 @@ from mailmerge import MailMerge
 import mammoth
 import datetime
 
-
+POPULATED_WORD = "./word_template/Populated_template_V2.docx"
+ABSOLUTE_PATH_LOGO = r"C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project\logo_confere.png"
 MONTH_DICT = {
     1: 'Janeiro',
     2: 'Fevereiro',
@@ -39,22 +40,6 @@ def month_in_reference():
     return last_month, year
 
 
-def convert_body_to_html(path_template) -> str:
-    """
-    :return: An HTML string with image of the assignature Frederico Gago
-    """
-
-    with open(path_template, "rb") as docx_file:
-        result = mammoth.convert_to_html(docx_file)
-        html = result.value  # The generated HTML
-        messages = result.messages  # Any messages, such as warnings during conversion
-
-    assingnature = f"""<br><br><br><br><img src="logo_confere.png"
-    alt="Com os melhores Cumprimentos, Frederico Gago, Confere - Silva & Sabino">"""
-
-    return html + assingnature
-
-
 def populate_word(company_name, contribuinte, corresponding_date: tuple, path_template):
 
     document = MailMerge(path_template)
@@ -66,5 +51,22 @@ def populate_word(company_name, contribuinte, corresponding_date: tuple, path_te
         nif=str(contribuinte)
     )
 
-    document.write("Populated_template_1.docx")
-    return "Populated_template_1.docx"
+    document.write(POPULATED_WORD)
+    return POPULATED_WORD
+
+
+def convert_body_to_html(path_template) -> str:
+    """
+    :return: An HTML string with image of the assignature Frederico Gago
+    """
+
+    with open(path_template, "rb") as docx_file:
+        result = mammoth.convert_to_html(docx_file)
+        html = result.value  # The generated HTML
+        messages = result.messages  # Any messages, such as warnings during conversion
+
+    html = html + f"""<br><br><br><br><img src="{ABSOLUTE_PATH_LOGO}"
+    alt="Com os melhores Cumprimentos,\n Frederico Gago\n Confere - Silva & Sabino">"""
+
+    return html
+
