@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-20T18:09:35.712Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74" etag="ub5quNhzQrse9YyIc522" version="14.4.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-20T18:13:50.685Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74" etag="Mi1xxTIodLesS5Todafl" version="14.4.2" type="github">
   <diagram id="s0VlZT-dddxHw9YY_n9r" name="Work_flow">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -16,7 +16,7 @@
         <mxCell id="jv6M93GBuTSODgMxpCH0-2" value="Extrair ficheiro SAFT e colocar na pasta de documentos de trabalho" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="350" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jv6M93GBuTSODgMxpCH0-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="jv6M93GBuTSODgMxpCH0-3" target="jv6M93GBuTSODgMxpCH0-2">
+        <mxCell id="jv6M93GBuTSODgMxpCH0-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jv6M93GBuTSODgMxpCH0-3" target="jv6M93GBuTSODgMxpCH0-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-3" value="Cliente&lt;br&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
@@ -27,9 +27,6 @@
         </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-8" value="Inicio 01-MES-ANO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="50" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="jv6M93GBuTSODgMxpCH0-11" value="SAFT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="540" y="110" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-13" value="Documentos de Trabalho:" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=none;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];fontColor=#000000;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="9" y="280" width="810" height="80" as="geometry" />
@@ -124,7 +121,7 @@
         <mxCell id="jv6M93GBuTSODgMxpCH0-46" value="Ture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="130" y="565" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="jv6M93GBuTSODgMxpCH0-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jv6M93GBuTSODgMxpCH0-47" target="jv6M93GBuTSODgMxpCH0-3">
+        <mxCell id="jv6M93GBuTSODgMxpCH0-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="jv6M93GBuTSODgMxpCH0-51" target="jv6M93GBuTSODgMxpCH0-3">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="850" y="750" />
@@ -132,11 +129,35 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jv6M93GBuTSODgMxpCH0-47" target="jv6M93GBuTSODgMxpCH0-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-47" value="Tirar Print Screen do erro e enviar por mail para o cliente" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="720" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-50" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="635" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-51" value="Preencher Excel controlo que houve um erro" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jv6M93GBuTSODgMxpCH0-55" target="jv6M93GBuTSODgMxpCH0-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jv6M93GBuTSODgMxpCH0-55" target="jv6M93GBuTSODgMxpCH0-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-55" value="Tem SAFT" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="585" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-60" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="170" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-61" value="&lt;span&gt;Preencher Excel Controlo que não tem SAFT para entregar&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="707" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jv6M93GBuTSODgMxpCH0-63" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="660" y="170" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
