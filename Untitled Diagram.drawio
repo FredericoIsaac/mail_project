@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-20T18:13:50.685Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74" etag="Mi1xxTIodLesS5Todafl" version="14.4.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-20T18:31:46.383Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36 Edg/88.0.705.74" etag="hXsmXLIDiY7LEzsTazPv" version="14.4.2" type="github" pages="2">
   <diagram id="s0VlZT-dddxHw9YY_n9r" name="Work_flow">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
         <mxCell id="jv6M93GBuTSODgMxpCH0-8" value="Inicio 01-MES-ANO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="50" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jv6M93GBuTSODgMxpCH0-13" value="Documentos de Trabalho:" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=none;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];fontColor=#000000;startSize=23;" vertex="1" parent="1">
+        <mxCell id="jv6M93GBuTSODgMxpCH0-13" value="Documentos de Trabalho:" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=none;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];fontColor=#000000;startSize=23;" vertex="1" parent="1" treatAsSingle="0">
           <mxGeometry x="9" y="280" width="810" height="80" as="geometry" />
         </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-18" value="DOCS_Cliente_NOME" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];" vertex="1" parent="jv6M93GBuTSODgMxpCH0-13">
@@ -54,7 +54,7 @@
             <mxPoint x="90" y="550" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jv6M93GBuTSODgMxpCH0-22" value="Envio SAFT:" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=none;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];fontColor=#000000;startSize=23;" vertex="1" parent="1">
+        <mxCell id="jv6M93GBuTSODgMxpCH0-22" value="Envio SAFT:" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=none;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];fontColor=#000000;startSize=23;" vertex="1" parent="1" treatAsSingle="0">
           <mxGeometry y="420" width="830" height="80" as="geometry" />
         </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-23" value="Internet Explorer" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];" vertex="1" parent="jv6M93GBuTSODgMxpCH0-22">
@@ -158,6 +158,17 @@
         </mxCell>
         <mxCell id="jv6M93GBuTSODgMxpCH0-63" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="660" y="170" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ltOGTMCzNKf5DhoQdi-I" name="code_flow">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="tgz6ovdGJr9H3sg51ZLa-0" />
+        <mxCell id="tgz6ovdGJr9H3sg51ZLa-1" parent="tgz6ovdGJr9H3sg51ZLa-0" />
+        <mxCell id="tgz6ovdGJr9H3sg51ZLa-6" value="&lt;h1&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 18px&quot;&gt;Objetivo do Programa&lt;/font&gt;&lt;/h1&gt;&lt;h1&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 12px ; font-weight: 400&quot;&gt;Simplificar processo do envio dos SAFT&#39;s automatizando e recebendo feedback do processo.&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px ; font-weight: 400&quot;&gt;Como:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px ; font-weight: 400&quot;&gt;Enviar automaticamente mail&#39;s aos clientes a pedir SAFT&#39;s&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Uma vez no inicio do mês 01-MES-ANO e outra vez no dia 10-MES-ANO&lt;/li&gt;&lt;ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;li&gt;Enviar SAFT para as finanças&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Caso haja erros enviar para o cliente print screen e pedir correção&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Dar feedback para mim da situação atual:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;SAFT&#39;s em falta&amp;nbsp;&lt;/li&gt;&lt;li&gt;SAFT&#39;s com erros&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="tgz6ovdGJr9H3sg51ZLa-1">
+          <mxGeometry x="30" y="20" width="490" height="220" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
