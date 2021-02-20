@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2102b30b-74a7-40a1-93a1-92b24e9af9ad" name="Default Changelist" comment="Refactor excel manipulation&#10;Refactor file excel - done">
+    <list default="true" id="2102b30b-74a7-40a1-93a1-92b24e9af9ad" name="Default Changelist" comment="Refactor word populate, class company no longer exist">
+      <change afterPath="$PROJECT_DIR$/flow_charts/modules.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flow_charts/resume_modules.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flow_charts/saft_workflow.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/mail_sender.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convert_word.py" beforeDir="false" afterPath="$PROJECT_DIR$/convert_word.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_excel_manipulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_excel_manipulation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saft_mail_template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/word_template/saft_mail_template.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +40,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Educacao/Programacao/100_days_python/Dia 31 - Flash Card App/flash_card_project" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flow_charts" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project\flow_charts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project\flow_charts" />
       <recent name="C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project\excel_conference" />
       <recent name="C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project\word_template" />
       <recent name="C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project" />
@@ -160,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.word_to_html" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.mail_sender" />
         <item itemvalue="Python.data_excel_manipulation" />
         <item itemvalue="Python.convert_word" />
-        <item itemvalue="Python.mail_sender" />
-        <item itemvalue="Python.word_to_html" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613590253151</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor word populate, class company no longer exist">
+      <created>1613676025688</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613676025688</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +234,7 @@
     <MESSAGE value="change ignore again" />
     <MESSAGE value="change ignore44" />
     <MESSAGE value="Refactor excel manipulation&#10;Refactor file excel - done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor excel manipulation&#10;Refactor file excel - done" />
+    <MESSAGE value="Refactor word populate, class company no longer exist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor word populate, class company no longer exist" />
   </component>
 </project>
