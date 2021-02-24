@@ -1,11 +1,15 @@
 import pandas as pd
+from string import ascii_uppercase as abc
+from openpyxl import load_workbook
+import win32api
 
 
 class ExcelMachine:
 
     def __init__(self, excel_file, sheet=None):
+        self.excel_file = excel_file
         self.sheet = sheet if sheet else 0
-        self.df = pd.read_excel(excel_file, sheet_name=self.sheet)
+        self.df = pd.read_excel(self.excel_file, sheet_name=self.sheet)
         self.clients_send_mail = self.to_send_mail()
         self.client_info = self.get_info_clients()
 
@@ -15,27 +19,32 @@ class ExcelMachine:
         :param column: The column to filter
         :return: Series that has column True
         """
-        return self.df[self.df[column]]
+        send_mail = self.df[self.df[column] == column]
+        return send_mail
 
     def get_info_clients(self):
         """
         Return a Dictionary with info of the company's to send mails
-
         :return:{
                 10100 : {
-                    "Ativo": boolean,
-                    "Nº Emp.": str,
-                    "EMPRESAS": str,
-                    "NIF's": str,
-                    "Responsável": str,
-                    "Ficheiro" str:
-                    "Mail - To": str,
-                    "Mail - CC": str,
-                    "Mail de Confirmação": boolean,
-                    "Observações": str,
-                    "Mail Enviado": str,
-                    "Submetido": boolean,
-                    "Enviar Mail": boolean,
+                     0 :{
+                        "Ativo": boolean,
+                        "Nº Emp.": str,
+                        "EMPRESAS": str,
+                        "NIF's": str,
+                        "Responsável": str,
+                        "Ficheiro" str:
+                        "Mail - To": str,
+                        "Mail - CC": str,
+                        "Mail de Confirmação": boolean,
+                        "Observações": str,
+                        "Mail Enviado": str,
+                        "Submetido": boolean,
+                        "Enviar Mail": boolean,
+                    }
+                    1: {
+                        ...: ...,
+                    }
                 }
         }
         """
@@ -54,9 +63,56 @@ class ExcelMachine:
 
         return clients_info_dict
 
-    def introduce_info(self):
-        # TODO 1. Criar metodo que coloca informação no excel, caso tenham erro ou caso o saft tenha sido submetido
-        pass
+    def introduce_info(self, company_number: int, store_number: int, info_saft: str):
+        """
+        Introduce information into the excel dependent of the param
+        :param store_number: Get from get_info_client {10101: {0: {'Ativo': True,...}, 1: {'Ativo': True,...}
+        :param company_number: The number of the company in question 10100
+        :param info_saft: mail_enviado or mail_erro or saft_submetido
+        :return: Status
+        """
+        respective_column = "Mail Enviado"
+        input_cell = "true"
+
+        if info_saft == "saft_submetido":
+            respective_column = "Submetido"
+        elif info_saft == "mail_erro":
+            input_cell = "false"
+
+        row = self.df.index[self.df["Nº Emp."] == company_number][0]
+        row = row + store_number + 2
+
+        columns_dict = dict(zip(self.df.columns, abc))
+        column = columns_dict[respective_column]
+
+        wb = load_workbook(filename=self.excel_file)
+        sheets = wb.sheetnames
+        if self.sheet == 0:
+            sheet = 0
+        else:
+            sheet = sheets.index(self.sheet)
+
+        print(sheet)
+        ws = wb.worksheets[sheet]
+        ws[f"{column}{row}"].value = input_cell
+
+        while True:
+            try:
+                wb.save(filename=self.excel_file)
+            except PermissionError:
+                win32api.MessageBox(0, "To continue close excel file and click ok.", "Excel File Open")
+            else:
+                break
 
 
-excel = ExcelMachine("excel_conference/Controle de Saft 2021 - Experiencia.xlsx")
+# excel = ExcelMachine("excel_conference/Controle de Saft 2021 - Experiencia.xlsx", "Experiencia")
+# excel.introduce_info(10101, 0, "mail_enviado")
+
+ALERT = """
+Verificar a entrada de informação em 
+excel.introduce_info(10101, 0, "mail_enviado")
+supostament no main esta a informação toda da empresa com diferentes lojas
+tenho que ver como vou processar a informação no main para perceber como vou introduzir os parametros:
+:param store_number: Get from get_info_client {10101: {0: {'Ativo': True,...}, 1: {'Ativo': True,...}
+:param company_number: The number of the company in question 10100
+"""

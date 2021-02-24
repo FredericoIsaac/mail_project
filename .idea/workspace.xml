@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2102b30b-74a7-40a1-93a1-92b24e9af9ad" name="Default Changelist" comment="Add flow charts with workflow">
-      <change afterPath="$PROJECT_DIR$/Info/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Info/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/excel_machine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="2102b30b-74a7-40a1-93a1-92b24e9af9ad" name="Default Changelist" comment="Criate excel machine class reorganizing data_excel_manupilation.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saft_workflow.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Info/saft_workflow.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/excel_machine.py" beforeDir="false" afterPath="$PROJECT_DIR$/excel_machine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Educacao/Programacao/100_days_python/Dia 34 - Quiz App GUI/quiz_app_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -167,9 +163,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.excel_machine" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.data_excel_manipulation" />
         <item itemvalue="Python.word_to_html" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.mail_sender" />
       </list>
     </recent_temporary>
@@ -225,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613849216384</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Criate excel machine class reorganizing data_excel_manupilation.py">
+      <created>1613935708386</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613935708386</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +250,7 @@
     <MESSAGE value="Refactor excel manipulation&#10;Refactor file excel - done" />
     <MESSAGE value="Refactor word populate, class company no longer exist" />
     <MESSAGE value="Add flow charts with workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add flow charts with workflow" />
+    <MESSAGE value="Criate excel machine class reorganizing data_excel_manupilation.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criate excel machine class reorganizing data_excel_manupilation.py" />
   </component>
 </project>
