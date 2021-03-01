@@ -41,3 +41,7 @@ https://stackabuse.com/reading-and-writing-excel-files-in-python-with-the-pandas
 Ao criar um novo "sheet", guardar mais a direita
 
 ![img.png](img.png)
+
+
+# read mails
+https://stackoverflow.com/questions/22813814/clearly-documented-reading-of-emails-functionality-with-python-win32com-outlook/39911751

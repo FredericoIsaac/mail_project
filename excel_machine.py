@@ -19,7 +19,7 @@ class ExcelMachine:
         :param column: The column to filter
         :return: Series that has column True
         """
-        send_mail = self.df[self.df[column] == column]
+        send_mail = self.df[self.df[column]]  # self.df[self.df[column] == True]
         return send_mail
 
     def get_info_clients(self):
@@ -103,10 +103,6 @@ class ExcelMachine:
                 win32api.MessageBox(0, "To continue close excel file and click ok.", "Excel File Open")
             else:
                 break
-
-
-# excel = ExcelMachine("excel_conference/Controle de Saft 2021 - Experiencia.xlsx", "Experiencia")
-# excel.introduce_info(10101, 0, "mail_enviado")
 
 ALERT = """
 Verificar a entrada de informação em 

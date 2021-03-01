@@ -1,46 +1,56 @@
-from mail_sender import *
-from convert_word import *
-from excel_machine import ExcelMachine
-from data_excel_manipulation import *
+import mail_machine
+import excel_machine
+import word_machine
+import corresponding_date
 
 
+# Identification of variables in the Program:
+
+# Word:
 WORD_TEMPLATE = "./word_template/saft_mail_template.docx"
+POPULATED_WORD = "./word_template/Populated_template_V2.docx"
+
+# Excel:
 EXCEL_PATH = "excel_conference/Controle de Saft 2021 - Experiencia.xlsx"
 SHEET = "Experiencia"
-ABSOLUTE_PATH_ATTACHMENT = r""
+
 
 # Get the corresponding month and year of the SAFT:
-month_year = month_in_reference()
+
+month_year = corresponding_date.month_in_reference()
+month = month_year[0]
+year = month_year[1]
 
 # Get the info of excel:
-# companies_info = extract_companies(EXCEL_PATH, SHEET)
-companies_info = ExcelMachine(EXCEL_PATH, SHEET)
 
-# TODO 1. Clean Main with the new information of companies_info
+excel_data = excel_machine.ExcelMachine(EXCEL_PATH, SHEET)
+companies_data = excel_data.client_info
 
-# TODO 2. Refactor mail_sender, with help of modules.jpg
 
 # Loop trough dict and get every company info:
-for key, value in companies_info.client_info.items():
-    # Populate Word with info of the company:
-    completed_word = populate_word(value["nome"], value["contribuinte"], month_year, WORD_TEMPLATE)
-    message = convert_body_to_html(completed_word)
 
-    # Send mail
-    subject = f"{value['identificacao']} - Saft {str(month_year[0]).zfill(2)}-{month_year[1]}"
-    mail = Mail(subject, message, value["mail_saft"], ABSOLUTE_PATH_ATTACHMENT)
-    mail.send_mail()
-    # print(key, value)
+for n_emp, emp_info in companies_data.items():
+    # n_emp = 10101
+    # emp_info = { 0: {"Ativo": True,....},{...}...}
 
-    # company = Company(value)
-    # Populate word document with info form company
-    # completed_word = populate_word(company.nome, company.contribuinte, month_year, WORD_TEMPLATE)
-    # message = convert_body_to_html(completed_word)
-    #
-    # subject = f"{company.numero} - Saft {str(month_year[0]).zfill(2)}-{month_year[1]}"
-    #
-    # mail = Mail(subject, message, company.mail_saft, ABSOLUTE_PATH_LOGO)
-    # mail.send_mail()
+    for store, store_info in emp_info.items():
+        # Populate Word with info of the company:
+        word_transformation = word_machine.WordMachine(
+            WORD_TEMPLATE,
+            POPULATED_WORD,
+            empresa=store_info["EMPRESA"],
+            nif=store_info["NIF"],
+            id_empresa=n_emp,
+        )
+
+        # Get info to send mail
+        mail_subject = word_transformation.subject_mail()
+        word_transformation.populate_word()
+        mail_body = word_transformation.message_to_mail()
+
+        # Send mail
+        mail = mail_machine.Mail(mail_subject, mail_body, store_info["Mail - To"], store_info["Mail - CC"])
+        mail.send_mail()
 
 
-print(f"You've sent {Mail.count} e-mails")
+print(f"You've sent {mail_machine.Mail.count} e-mails")
