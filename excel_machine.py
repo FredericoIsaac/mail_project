@@ -69,7 +69,6 @@ class ExcelMachine:
         :param store_number: Get from get_info_client {10101: {0: {'Ativo': True,...}, 1: {'Ativo': True,...}
         :param company_number: The number of the company in question 10100
         :param info_saft: mail_enviado or mail_erro or saft_submetido
-        :return: Status
         """
         respective_column = "Mail Enviado"
         input_cell = "true"

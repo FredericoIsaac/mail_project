@@ -94,7 +94,7 @@ class WordMachine:
         message.attach(html_text)
 
         # We reference the image in the IMG SRC attribute by the ID we give it <img src='cid:logo'>
-        with open("images/signature.png", "rb") as img:
+        with open(r"C:\Users\Frederico\Desktop\Frederico Gago\Confere\Programas\mail_project\images\signature.png", "rb") as img:
             signature = MIMEImage(img.read())
             signature.add_header("Content-ID", "<logo>")
             message.attach(signature)
